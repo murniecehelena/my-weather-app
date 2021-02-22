@@ -1,0 +1,100 @@
+body {
+  width: 100%;
+}
+h1 {
+  color: orangered;
+  font-size: 50px;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+
+h2,
+h3 {
+  color: orange;
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  top: 10px;
+  margin: 0;
+}
+
+p {
+  line-height: 0.9;
+}
+.stats {
+  color: orange;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  list-style: none;
+  border: 2px solid orange;
+  margin: 30px 20px 50px 150px;
+  position: fixed;
+  right: 270px;
+}
+
+ul {
+  width: 250px;
+}
+
+.center {
+  justify-content: center;
+}
+
+.Flex {
+  display: flex;
+}
+
+.AlignText-Center {
+  text-align: center;
+}
+
+.AlignText-Left {
+  text-align: left;
+}
+
+.DayContainer {
+  display: flex;
+}
+
+.DayContainer-Element {
+  width: 100px;
+  height: 200px;
+  margin: 15px;
+}
+
+.DayContainer-ElementCircle {
+  height: 100px;
+  width: 100px;
+  border: 3px solid orange;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+
+.WeekDays {
+  color: orangered;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 450;
+}
+
+.Temperature {
+  color: orange;
+  font-size: 20px;
+}
+.Icon {
+  font-size: 35px;
+}
+
+#btn {
+  color: orangered;
+  background-color: orange;
+  border: 2px solid;
+}
+#form {
+  display: block;
+  position: relative;
+  right: 250px;
+  top: 250px;
+}
