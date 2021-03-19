@@ -5,6 +5,13 @@ let days = [
     "Wednsday",
     "Thursday",
     "Friday",
+    "Saturday",
+     "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednsday",
+    "Thursday",
+    "Friday",
     "Saturday"
   ];
   let months = [
@@ -23,7 +30,12 @@ let days = [
   ];
 
 let date = document.querySelector("#date");
-let time = document.querySelector("#time")
+let time = document.querySelector("#time");
+let first = document.querySelector("#first");
+let second = document.querySelector("#second");
+let third = document.querySelector("#third");
+let fourth = document.querySelector("#fourth");
+let fifth = document.querySelector("#fifth");
 
 let now = new Date();
 let currentDay = days[now.getDay()];
@@ -43,11 +55,28 @@ if (currentMonth<12){
 
 date.innerHTML = `${currentDay}, ${currentDate}/${currentMonth}`
 time.innerHTML= `${hours}:${minutes}`
+first.innerHTML= days[now.getDay()+1];
+second.innerHTML=days[now.getDay()+2];
+third.innerHTML=days[now.getDay()+3];
+fourth.innerHTML=days[now.getDay()+4];
+fifth.innerHTML=days[now.getDay()+5];
+ 
+
+
 
 function displayWeatherConditions(response){
 document.querySelector("#city").innerHTML=response.data.name;
-document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp) ;
-}
+document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp) +  "°C" ;
+document.querySelector("#wind").innerHTML = "wind         " + Math.round(response.data.wind.speed)+"m/s";
+document.querySelector("#humidity").innerHTML= "humidity       "+(response.data.main.humidity)+"%";
+document.querySelector("#feelsLike").innerHTML= "feels like     "+ Math.round(response.data.main.feels_like)+"°C";
+document.querySelector("#weatherDescription").innerHTML =response.data.weather[0].description;
+};
+
+
+
+
+
 
 function search(event){
 event.preventDefault();
