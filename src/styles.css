@@ -105,3 +105,11 @@ ul {
   right: 250px;
   top: 250px;
 }
+.positioning {
+  position: relative;
+  left: 80px;
+  top: 0px;
+}
+#icon {
+  position: absolute;
+}
