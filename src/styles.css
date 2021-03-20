@@ -37,8 +37,8 @@ p {
   list-style: none;
   border: 2px solid orange;
   margin: 30px 20px 50px 150px;
-  position: fixed;
-  right: 270px;
+  position: relative;
+  right: 5px;
 }
 
 ul {
@@ -59,6 +59,9 @@ ul {
 
 .AlignText-Left {
   text-align: left;
+}
+.Align-right {
+  text-align: right;
 }
 
 .DayContainer {
@@ -105,11 +108,9 @@ ul {
   right: 250px;
   top: 250px;
 }
-.positioning {
-  position: relative;
-  left: 80px;
-  top: 0px;
-}
+
 #icon {
   position: absolute;
+  left: 15px;
+  top: 20px;
 }

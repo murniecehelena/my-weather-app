@@ -71,13 +71,14 @@ document.querySelector("#wind").innerHTML = "wind         " + Math.round(respons
 document.querySelector("#humidity").innerHTML= "humidity       "+(response.data.main.humidity)+"%";
 document.querySelector("#feelsLike").innerHTML= "feels like     "+ Math.round(response.data.main.feels_like)+"°C";
 document.querySelector("#weatherDescription").innerHTML =response.data.weather[0].description;
-document.querySelector("#precipitation").innerHTML=response.data.precipitation.mode;
+if (response.data.rain!==undefined){
+  document.querySelector("#precipitation").innerHTML = response.data.rain["1h"]+"mm/h";
+}else{
+  document.querySelector("#precipitation").innerHTML="no rain";
+};
 };
 
-function displayForecast(response){
-  let forecast = response.data.list[0];
-  document.querySelector("#FirstTemperature").innerHTML=Math.round(forecast.main.temp_max) + "/"+Math.round(forecast.main.temp_min);
-}
+
 
 
 
