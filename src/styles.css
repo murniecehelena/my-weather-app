@@ -98,6 +98,14 @@ ul {
   position: relative;
   top: 45px;
   float: right;
+  right: 50px;
+}
+.units {
+  color: orange;
+  float: right;
+  position: relative;
+  top: 50px;
+  left: 30px;
 }
 #city {
   position: relative;
