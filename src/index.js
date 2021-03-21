@@ -100,6 +100,8 @@ apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api
 axios.get(apiUrl).then(displayForecast);
 }
 
+
+
 let searchForm = document.querySelector("#form");
 searchForm.addEventListener("submit", search);
 

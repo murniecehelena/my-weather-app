@@ -1,12 +1,10 @@
 body {
   width: 100%;
 }
+
 h1 {
   color: orangered;
   font-size: 50px;
-  position: relative;
-  left: 20px;
-  top: 20px;
 }
 
 h2,
@@ -14,17 +12,12 @@ h3 {
   color: orange;
   font-size: 25px;
   font-weight: 300;
-  position: relative;
-  top: 10px;
   margin: 0;
 }
 h4 {
-  color: orangered;
-  font-size: 20px;
-  font-family: monospace;
   position: relative;
-  top: 100px;
-  left: 25px;
+  font-size: 18px;
+  top: 70px;
 }
 p {
   line-height: 0.9;
@@ -36,9 +29,8 @@ p {
   text-align: left;
   list-style: none;
   border: 2px solid orange;
-  margin: 30px 20px 50px 150px;
   position: relative;
-  right: 5px;
+  top: 80px;
 }
 
 ul {
@@ -49,10 +41,6 @@ ul {
   justify-content: center;
 }
 
-.Flex {
-  display: flex;
-}
-
 .AlignText-Center {
   text-align: center;
 }
@@ -60,14 +48,12 @@ ul {
 .AlignText-Left {
   text-align: left;
 }
-.Align-right {
+.align-right {
   text-align: right;
 }
-
-.DayContainer {
-  display: flex;
+.float-right {
+  float: right;
 }
-
 .DayContainer-Element {
   width: 100px;
   height: 200px;
@@ -104,13 +90,31 @@ ul {
 }
 #form {
   display: block;
+  float: right;
+}
+#temperature {
+  color: orangered;
+  font-size: 30px;
   position: relative;
-  right: 250px;
-  top: 250px;
+  top: 45px;
+  float: right;
+}
+#city {
+  position: relative;
+  top: 50px;
+}
+#icon {
+  position: relative;
+  padding: 5px;
+  bottom: 50px;
+  left: 120px;
 }
 
-#icon {
-  position: absolute;
-  left: 15px;
-  top: 20px;
+#date {
+  position: relative;
+  top: 35px;
+}
+#time {
+  position: relative;
+  top: 35px;
 }

@@ -12,63 +12,69 @@
 </head>
 
 <body>
-    <div class="MainPage-Frame">
-        <div class="Flex container">
-            <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png">
-            <div class=" AlignText-Center">
-                <div class="Align-rights">
-                <h1 id="city">City </h1>
-                <h1 id="temperature">T°C/°F</h1>
-               </div>
-                <h2 id="date"></h2>
-                <h3 id="time"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="AlignText-Left" id="city">City</h1>
+                <h2 class="AlignText-Left" id="date"> </h2>
+                <h3 class="AlignText-Left" id="time"></h3>
+                <p id="temperature">12°C/°F</p>
+                <img class="AlignText-Left" id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear">
             </div>
-            <ul class="stats">
-                <li id="wind">wind</li>
-                <li id="feelsLike">feels like</li>
-                <li id="humidity">humidity</li>
-                <li id="weatherDescription">description</li> 
-                <li id="precipitation">precipitation</li>
-            </ul>
-        </div>
-
-        <div class="DayContainer Flex container">
-            <div class="DayContainer-Element center">
-                <p class="AlignText-Center WeekDays" id="first"></p>
-                <div class="DayContainer-ElementCircle center">
-                    <p class="AlignText-Center Temperature" id="FirstTemperature">10/6</p>
-                    <p class="AlignText-Center Icon"id="iconOne">⛅️</p>
+            <div class="col-6 ">
+                <ul class="stats float-right">
+                    <li id="wind">wind</li>
+                    <li id="feelsLike">feels like</li>
+                    <li id="humidity">humidity</li>
+                    <li id="weatherDescription">description</li>
+                    <li id="precipitation">precipitation</li>
+                </ul>
+            </div>
+            <div class="col mx-1">
+                <div class="DayContainer-Element center">
+                    <p class="AlignText-Center WeekDays" id="first"></p>
+                    <div class="DayContainer-ElementCircle center">
+                        <p class="AlignText-Center Temperature" id="FirstTemperature">10/6</p>
+                        <p class="AlignText-Center Icon" id="iconOne">⛅️</p>
+                    </div>
                 </div>
             </div>
-            <div class="DayContainer-Element center">
-                <p class="AlignText-Center WeekDays" id="second"></p>
-                <div class="DayContainer-ElementCircle center">
-                    <p class="AlignText-Center Temperature"id="SecondTemperature" >10/6</p>
-                    <p class="AlignText-Center Icon"id="iconTwo" >⛅️</p>
+            <div class="col mx-1">
+                <div class="DayContainer-Element center">
+                    <p class="AlignText-Center WeekDays" id="second"></p>
+                    <div class="DayContainer-ElementCircle center">
+                        <p class="AlignText-Center Temperature" id="SecondTemperature">10/6</p>
+                        <p class="AlignText-Center Icon" id="iconTwo">⛅️</p>
+                    </div>
                 </div>
             </div>
-            <div class="DayContainer-Element center">
-                <p class="AlignText-Center WeekDays"  id="third" ></p>
-                <div class="DayContainer-ElementCircle center">
-                    <p class="AlignText-Center Temperature"id="ThirdTemperature" >10/6</p>
-                    <p class="AlignText-Center Icon" id="iconThree">⛅️</p>
+            <div class="col mx-1">
+                <div class="DayContainer-Element center">
+                    <p class="AlignText-Center WeekDays" id="third"></p>
+                    <div class="DayContainer-ElementCircle center">
+                        <p class="AlignText-Center Temperature" id="ThirdTemperature">10/6</p>
+                        <p class="AlignText-Center Icon" id="iconThree">⛅️</p>
+                    </div>
                 </div>
             </div>
-            <div class="DayContainer-Element center">
-                <p class="AlignText-Center WeekDays" id="fourth"></p>
-                <div class="DayContainer-ElementCircle center">
-                    <p class="AlignText-Center Temperature" id="FourthTemperature">10/6</p>
-                    <p class="AlignText-Center Icon" id="iconFour">⛅️</p>
+            <div class="col mx-1">
+                <div class="DayContainer-Element center">
+                    <p class="AlignText-Center WeekDays" id="fourth"></p>
+                    <div class="DayContainer-ElementCircle center">
+                        <p class="AlignText-Center Temperature" id="FourthTemperature">10/6</p>
+                        <p class="AlignText-Center Icon" id="iconFour">⛅️</p>
+                    </div>
                 </div>
             </div>
-            <div class="DayContainer-Element center">
-                <p class="AlignText-Center WeekDays" id="fifth"></p>
-                <div class="DayContainer-ElementCircle center ">
-                    <p class="AlignText-Center Temperature" id="FifthtTemperature">10/6</p>
-                    <p class="AlignText-Center Icon" id="iconFive">⛅️</p>
+            <div class="col mx-1">
+                <div class="DayContainer-Element center">
+                    <p class="AlignText-Center WeekDays" id="fifth"></p>
+                    <div class="DayContainer-ElementCircle center ">
+                        <p class="AlignText-Center Temperature" id="FifthtTemperature">10/6</p>
+                        <p class="AlignText-Center Icon" id="iconFive">⛅️</p>
+                    </div>
                 </div>
             </div>
-
             <form id=form>
                 <div class="row">
                     <div class="col-8">
@@ -80,10 +86,9 @@
                 </div>
             </form>
         </div>
-       <h4>
-         <a href="https://github.com/murniecehelena/my-weather-app.git">Open-source code</a>  by Helena Murniece    
-       </h4>
-    
+        <h4>
+            <a href="https://github.com/murniecehelena/my-weather-app.git">Open-source code</a> by Helena Murniece
+        </h4>
     </div>
     <script src="src/index.js"></script>
 </body>
