@@ -66,7 +66,7 @@ fifth.innerHTML=days[now.getDay()+5];
 
 function displayWeatherConditions(response){
 document.querySelector("#city").innerHTML=response.data.name;
-document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp) +  "°C" ;
+document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
 document.querySelector("#wind").innerHTML = "wind         " + Math.round(response.data.wind.speed)+"m/s";
 document.querySelector("#humidity").innerHTML= "humidity       "+(response.data.main.humidity)+"%";
 document.querySelector("#feelsLike").innerHTML= "feels like     "+ Math.round(response.data.main.feels_like)+"°C";
@@ -81,12 +81,23 @@ if (response.data.rain!==undefined){
   );
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 };
+celsiusTemperature = response.data.main.temp;
 };
 
 
+function showFahrenheit(event){
+event.preventDefault();
+let fahrenheit=((celsiusTemperature)*9)/5+32;
+document.querySelector("#temperature").innerHTML = Math.round(fahrenheit);
+};
 
+let celsiusTemperature=null;
 
+let searchForm = document.querySelector("#form");
+searchForm.addEventListener("submit", search);
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit );
 
 function search(event){
 event.preventDefault();
@@ -98,12 +109,4 @@ axios.get(apiUrl).then(displayWeatherConditions);
 
 apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(displayForecast);
-}
-
-
-
-let searchForm = document.querySelector("#form");
-searchForm.addEventListener("submit", search);
-
-
-
+};
