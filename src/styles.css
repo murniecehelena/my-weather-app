@@ -94,18 +94,18 @@ ul {
 }
 #temperature {
   color: orangered;
-  font-size: 30px;
+  font-size: 25px;
   position: relative;
   top: 45px;
   float: right;
-  right: 60px;
+  right: 65px;
 }
 .units {
   color: orange;
   float: right;
   position: relative;
   top: 40px;
-  left: 20px;
+  left: 15px;
 }
 #city {
   position: relative;
@@ -125,4 +125,12 @@ ul {
 #time {
   position: relative;
   top: 35px;
+}
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
 }

@@ -87,9 +87,18 @@ celsiusTemperature = response.data.main.temp;
 
 function showFahrenheit(event){
 event.preventDefault();
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 let fahrenheit=((celsiusTemperature)*9)/5+32;
 document.querySelector("#temperature").innerHTML = Math.round(fahrenheit);
 };
+
+function showCelsius(event){
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+  document.querySelector("#temperature").innerHTML =Math.round(celsiusTemperature);
+}
 
 let celsiusTemperature=null;
 
@@ -98,6 +107,9 @@ searchForm.addEventListener("submit", search);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit );
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius );
 
 function search(event){
 event.preventDefault();
