@@ -77,7 +77,7 @@ if (response.data.rain!==undefined){
   document.querySelector("#precipitation").innerHTML="no rain";
   document.querySelector("#icon").setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 };
